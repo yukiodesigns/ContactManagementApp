@@ -7,8 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.contactapp.ViewModel.UserViewModel
-import com.example.contactapp.ViewModel.UserViewModelFactory
+import com.example.contactapp.myviewModel.UserViewModel
+import com.example.contactapp.myviewModel.UserViewModelFactory
 import com.example.contactapp.databinding.ActivityMainBinding
 import com.example.contactapp.room.User
 import com.example.contactapp.room.UserDatabase
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
     }
      private fun initRecyclerView(){
-         binding.recyclerView.layoutManager = LinearLayoutManager
+         binding.recyclerView.layoutManager = LinearLayoutManager(this)
          DisplayUsersList()
      }
 
