@@ -2,11 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <data>
+        <variable
+            name="userViewModel"
+            type="com.example.contactapp.ViewModel.UserViewModel"/>
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constaint2"
@@ -26,6 +31,7 @@
                 android:layout_marginEnd="91dp"
                 android:layout_marginBottom="2dp"
                 android:hint="Enter your name"
+                android:text="@={userViewModel.inputEmail}"
                 app:layout_constraintBottom_toTopOf="@+id/email"
                 app:layout_constraintEnd_toStartOf="@+id/saveBtn"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="68dp"
+                android:text="@={userViewModel.inputName}"
                 android:hint="Enter your email"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
