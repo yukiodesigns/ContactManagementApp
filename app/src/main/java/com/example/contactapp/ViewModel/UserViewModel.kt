@@ -57,6 +57,9 @@ class UserViewModel(private val repository: UserRepo) : ViewModel(), Observable{
         repository.delete(user)
     }
 
+    fun initUpdateAndDelete(){
+
+    }
     override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
 
     }
